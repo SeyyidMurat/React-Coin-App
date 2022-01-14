@@ -1,0 +1,18 @@
+.main{
+	color: var(--txt-color);
+	height: 100vh;
+	background: var(--second-bg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	overflow: hidden;
+
+}
+
+.dashboard{
+	flex: 1;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+}

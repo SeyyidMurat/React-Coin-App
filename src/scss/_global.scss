@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    --main-bg: #ffffff;
+    --second-bg: #f8f9fa;
+    --gray-color:#ced4da;
+    --txt-color: #455560;
+    --txt-white: #fff;
+    --txt-red:#e15241;
+    --txt-green:#4eaf0a;
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --border-color:#dee2e6;
+    --star-color:#fc6;
+    --transition-cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: var(--txt-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input[type=text]{
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.card {
+    background: var(--main-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding:1rem;
+    
+    
+    &__header{
+        text-transform: capitalize;
+    }
+    &__body{
+        margin-top: 1.875rem;
+    }
+   
+}
+
+/*-----star------*/
+
+.star-active{
+    color: var(--star-color);
+    
+    & > svg{
+        fill: var(--star-color);
+    }
+}
+
+/*---color---*/
+.text-color-red{
+    color: #e15241;
+}
+
+.text-color-green{
+    color:#4eaf0a;
+}
+
+/*--Loading Page--*/
+
+.feedback-info{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.9);
+    z-index: 10;
+
+        &-item{
+            font-size: 2.5rem;
+        }
+
+        &-coinList{
+            width: 50vw;
+            height: 25vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+}

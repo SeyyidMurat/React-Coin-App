@@ -1,0 +1,114 @@
+.coinList{
+    overflow-y: auto;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid #d8e1e8;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: rgba(16, 22, 26, 0.3);
+        border-radius: .5rem;
+        border: .25rem solid transparent;
+        background-clip: padding-box;
+    }
+    
+    &__header{
+        position: sticky;
+        top: 0;
+        height: 4.5rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background:#adb5bd;
+
+        &-title{
+            color: var(--txt-white);
+        }
+
+        &-input{
+            position: relative;
+            height: 100%;
+            max-width: 340px;
+            display: flex;
+            align-items: center;
+
+            & > input{
+                flex: 1;
+                height: 100%;
+                padding: 0 1rem;
+                border-radius: .5rem;
+                border: 1px solid var(--border-color);
+
+                &:hover{
+                    border: 1px solid #000000;
+                }
+
+                &::placeholder{
+                    font-size: .85rem;
+                }
+            }
+
+            & > label{
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: 25%;
+            }
+        }
+    }
+
+    &__body{
+        padding: 1rem;
+        background:var(--second-bg);
+    }
+}
+
+
+.favoriCoin{
+    
+
+    &__title{
+        margin-bottom: 1rem;
+    }
+
+    &__card{
+        position:relative;
+        min-width: 210px;
+        max-height: 240px;
+
+
+        &-head{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &-body{
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 1rem;
+
+            &-price{
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+
+    &__container{
+        display: flex;
+        overflow: hidden;
+        height: calc(100% - 4.5rem);
+
+        & > * {
+            flex-shrink: 0;
+        }
+    }
+
+}

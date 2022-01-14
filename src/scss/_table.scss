@@ -1,0 +1,34 @@
+.table{
+       
+       &__wrapper{
+            width: 100%;
+            min-width: 400px;
+            border-spacing: 0;
+            border-collapse: collapse;
+            
+            thead{
+                background: var(--gray-color);
+            }
+
+            tbody > tr {
+                transition: background 150ms ease-in-out;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            tbody > tr:hover{
+                background: var(--gray-color);
+                
+            }
+    
+            tr{
+                text-align: left;
+            }
+
+            th,td{
+                text-transform: capitalize;
+                padding: 1rem .75rem;
+                font-weight: 500;
+            }
+        }    
+}
+
